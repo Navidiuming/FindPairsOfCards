@@ -16,6 +16,37 @@
 .header{
     font-size: xx-large;
     margin-top: 10px;
+    position: relative;
+    height: 20vh;
+    width: 100%;
+}
+
+.header .difficultlySelection , .scoreboard{
+    position: absolute;
+    width: 100%;
+    height: 100%;   
+    font-size: 5vh;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-around;
+}
+.header .scoreboard .scoreBoardVisualItem{
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.header .scoreboard .scoreBoardIntractItem{
+    height: 90%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-around;
+    box-sizing: border-box;
+
 }
 .header .difficultlySelection{
     padding: 5px;
@@ -26,8 +57,9 @@
     column-gap: 10%;
     row-gap: 10px;
     background-color: coral;
-    box-shadow:5px 10px 10px black;
+    box-shadow:5px 10px 10px rgb(8, 5, 5);
     box-sizing: border-box;
+
 }
 
 .header .difficultlySelection .difficultlyLevelHolder{
@@ -52,20 +84,23 @@
     min-width: 500px;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    
     background-color: lemonchiffon;
     box-shadow: 10px 20px 10px black;
     row-gap: 1vmin;
 
 }
 
+/* my big problem is when i dont set the width at the beggining js could not load the right width */
 .playSheet .card{
     margin: auto;
     padding: auto;
-    height: 10vmin;
+    /* height: auto;
     min-height: 100px;
-    width: 10vmin;
-    min-width: 100px;
+    min-width: auto; */
+    /* width: 10vmin; */
+    width: 100px;
+    aspect-ratio: 1;
     position: relative;
     box-shadow: 1px 1px 10px black;
     border-radius: 10%;
@@ -91,4 +126,33 @@
 }
 .playSheet .card.show {
 	transform: rotateY(180deg);
+}
+
+
+
+.invis{
+    display: none;
+}
+
+
+.resultPage{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 200px;
+    z-index: 1;
+    top: calc(60% - 100px);
+    display: none;
+}
+
+.resultPage p{
+    /* color: white; */
+    position: relative;
+    text-shadow: 5px 5px 5px white,-5px -5px 5px white
+    ,10px -10px 10px purple,-10px 10px 10px purple
+    ,20px 20px 20px orange,-20px -20px 20px orange;
+
+    top: calc(50% - 5px);
+    text-align: center;
+    font-size: large;
 }

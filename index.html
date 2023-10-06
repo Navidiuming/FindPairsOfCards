@@ -7,27 +7,43 @@
     <title>find me</title>
 </head>
 <body>
+    <div class="resultPage">
+        <p>you finished the game !!! select better difficulty</p>
+    </div>
     <div class="mainContainer">
-        <div class="header">
+        <div class="header" id="headerSection">
             <div class="difficultlySelection">
                 <div class="difficultlyLevelHolder">
                     <p>easy</p>
-                    <button>3*4</button>
+                    <button class="difficultlyBtn">3*4</button>
                 </div>
 
                 <div class="difficultlyLevelHolder">
                     <p>normal</p>
-                    <button>4*4</button>
+                    <button class="difficultlyBtn">4*4</button>
                     
                 </div>
                 <div class="difficultlyLevelHolder">
                     <p>hard</p>
-                    <button>6*4</button>
+                    <button class="difficultlyBtn">6*4</button>
                 </div>
                 <div class="difficultlyLevelHolder">
                     <p>impossible</p>
-                    <button>8*4</button>
+                    <button class="difficultlyBtn">8*4</button>
                 </div>   
+            </div>
+            <div class="scoreboard" id="scoreboardSection">
+                <div class="scoreBoardVisualItem">
+                    <p class="ScoreDisplay">Score <span> 0 </span></p>
+                    <p class="TimerDisplay">timer <span> 00:00</span></p>
+                    <P class="movesDisplay">moves <span>0</span></P>
+
+                </div>
+                <div class="scoreBoardIntractItem">
+                    <button id="start">start</button>
+                    <button id="btnSetting">diffuculty setting</button>
+                    <button id="pause">pause</button>
+                </div>
             </div>
         </div>
         <div class="playSheet">
